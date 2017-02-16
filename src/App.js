@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import { SocketProvider } from 'socket.io-react';
-import io from 'socket.io-client';
-
 import {geolocated}         from 'react-geolocated';
 
 import AddDonorModal        from './views/AddDonorModal';
@@ -11,9 +8,6 @@ import MapComponent         from './views/Map';
 import {connect}            from 'react-redux';
 import {bindActionCreators} from 'redux';
 import donorActions         from './actions/donors';
-
-const socket = io.connect('http://localhost:3001');
-socket.on('message', msg => console.log(msg));
 
 class App extends Component {
 
